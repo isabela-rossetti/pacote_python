@@ -28,17 +28,17 @@ Isabela Rossetti
 
 
 
-------------------------------------------------------------------------------------------
+__________________________________________
 
-## Passo a passo para a criacao do pacote
+<h2>Passo a passo para criacao do pacote</h2>
 
-<h4>1. Criar conta no Test Pypi e Pypi</h4>
+<h3>1. Criar conta no Test Pypi e Pypi</h3>
 
 [Test Pypi](https://test.pypi.org/)
 
 [Pypi](https://pypi.org/)
 
-<h4> 2. Criar um projeto </h4>
+<h3> 2. Criar um projeto </h3>
 
 Criar pastas e arquivos para submissao. Neste caso foi utilizado a seguinte estrutura:
 
@@ -51,7 +51,7 @@ Criar pastas e arquivos para submissao. Neste caso foi utilizado a seguinte estr
       └calcpagamento
 ```
 
-<h4> 3. Editar o conteudo dos arquivos</h4>
+<h3> 3. Editar o conteudo dos arquivos</h3>
 
 <h5> LICENSE </h5>
 
@@ -112,11 +112,11 @@ def calcular_pagamento(qtd_horas, valor_hora):
   return salario
 ```
 
-<h4>4. Acessar a raiz do projeto</h4>
+<h3>4. Acessar a raiz do projeto</h3>
 
 Acessar a pasta raiz do projeto atraves do terminal.
 
-<h4>5. Executar os comandos de instalação</h4>
+<h3>5. Executar os comandos de instalação</h3>
 
 Os seguintes comandos devem ser executados no terminal:
 
@@ -136,13 +136,14 @@ python -m pip install --user setuptools
 pip install wheel
 ```
 
-<h4>6. Executar o comando para criar a distribuicao
+<h3>6. Executar o comando para criar a distribuicao</h3>
+
 
 ```
 python setup.py sdist bdist_wheel
 ```
 
-<h4>7. Publicar o pacote no Test Pypi</h4>
+<h3>7. Publicar o pacote no Test Pypi</h3>
 
 Publicar primeiro no Test Pypi para testar o funcionamento do pacote sem atrapalhar o versionamento do repositorio oficial (Pypi) atraves do seguinte comando:
 
@@ -152,7 +153,7 @@ python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 Neste momento sera pedido o login e senha cadastradas no site TestPypi. Feito o login, o pacote devera ser instalado com sucesso. 
 
-<h4>8. Testar o pacote</h4>
+<h3>8. Testar o pacote</h3>
 
 Apos acessar o pacote no site TestPypi, executar a instalacao do pacote atraves do seguinte comando:
 
@@ -171,7 +172,7 @@ from calculosalario import calcpagamento
 calcpagamento.calcular_pagamento(220,20)
 ```
 
-<h4>9. Publicar o pacote no Pypi</h4>
+<h3>9. Publicar o pacote no Pypi</h3>
 
 Com o pacote funcionando, publicar no Pypi atraves do seguinte comando:
 
@@ -181,7 +182,7 @@ python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 
 Novamente sera pedido o login e senha (desta vez as cadastradas no site Pypi) e o pacote sera instalado.
 
-<h4> 10. Usar o pacote</h4>
+<h3>10. Usar o pacote</h3>
 
 Executar a instalacao do pacote atraves do codigo gerado no Pypi:
 
